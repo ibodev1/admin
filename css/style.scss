@@ -1,0 +1,694 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: all 300ms ease-in-out;
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.kutular {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr 2fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+  grid-template-areas:
+    "kutu0 kutu0"
+    "kutu1 kutu2"
+    "kutu3 kutu4"
+    "kutu5 kutu6";
+  color: white;
+  justify-content: center;
+  .box {
+    z-index: 99;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+    text-shadow: 0px 0px 6px black;
+    background: black;
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
+      filter: blur(2px);
+      transform: scale(1.0075);
+    }
+    .txt {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      h1 {
+        display: block;
+        position: relative;
+        margin-left: 20px;
+        margin-top: 10px;
+        font-size: 38px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -10px;
+          width: 5px;
+          height: 100%;
+          background: red;
+        }
+      }
+    }
+    &:hover {
+      .txt {
+        h1 {
+          margin-left: 25px;
+        }
+      }
+    }
+  }
+}
+
+.kutu0 {
+  grid-area: kutu0;
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  .left {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    word-wrap: break-word;
+    flex-direction: column;
+  }
+  .right {
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .rbox {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 100%;
+      height: 100%;
+      word-wrap: break-word;
+      font-size: 20px;
+    }
+    button {
+      width: 50px;
+      min-width: 50px;
+      height: 100%;
+      border: 0;
+      background: orange;
+      font-weight: bold;
+      font-size: 24px;
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: width 150ms ease-in-out;
+      p {
+        transform: rotate(90deg);
+        transition: transform 150ms ease-in-out;
+      }
+      &:hover {
+        width: 150px;
+        min-width: 150px;
+        p {
+          transform: rotate(0deg);
+        }
+      }
+    }
+  }
+}
+
+.kutu1 {
+  grid-area: kutu1;
+  .doviz_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .dbox {
+      width: 30%;
+      height: 25%;
+      margin: 0px 20px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        position: relative;
+        margin-bottom: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0px;
+          width: 100%;
+          height: 5px;
+          background: red;
+        }
+      }
+    }
+  }
+}
+
+.kutu2 {
+  grid-area: kutu2;
+  .korona_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .kbox {
+      width: 25%;
+      height: 25%;
+      margin: 0px 20px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        position: relative;
+        margin-bottom: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0px;
+          width: 100%;
+          height: 5px;
+          background: red;
+        }
+      }
+    }
+  }
+}
+
+.kutu3 {
+  grid-area: kutu3;
+  .kripto_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .kbox {
+      width: 25%;
+      height: 25%;
+      margin: 0px 20px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        position: relative;
+        margin-bottom: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0px;
+          width: 100%;
+          height: 5px;
+          background: red;
+        }
+      }
+    }
+  }
+}
+
+.kutu4 {
+  grid-area: kutu4;
+  .hava_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .hbox {
+      width: 25%;
+      height: 25%;
+      margin: 0px 20px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        position: relative;
+        margin-bottom: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0px;
+          width: 100%;
+          height: 5px;
+          background: red;
+        }
+      }
+    }
+  }
+}
+.kutu5 {
+  grid-area: kutu5;
+  .altin_text {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .abox {
+      width: 25%;
+      height: 25%;
+      margin: 0px 20px;
+      font-size: 1.8rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      h3 {
+        position: relative;
+        margin-bottom: 10px;
+        &::before {
+          content: "";
+          position: absolute;
+          bottom: -5px;
+          left: 0px;
+          width: 100%;
+          height: 5px;
+          background: red;
+        }
+      }
+    }
+  }
+}
+.kutu6 {
+  position: relative;
+  grid-area: kutu6;
+  .namaz {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    p {
+      font-size: 22px;
+    }
+    .row {
+      position: relative;
+      margin: 0px 15px;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: -7px;
+
+        width: 5px;
+        height: 100%;
+        background: red;
+      }
+    }
+  }
+}
+
+.glow {
+  color: #f00;
+  text-shadow: 0px 0px 10px #f00;
+}
+
+.h1span {
+  display: inline-block;
+  padding: 0 2px;
+}
+
+.menu-bg {
+  width: 100%;
+  height: 100%;
+  background: black;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
+  opacity: 0.5;
+}
+
+.ayarlar {
+  display: none;
+  .menu {
+    width: 500px;
+    height: 500px;
+    max-width: 500px;
+    max-height: 500px;
+    min-width: 500px;
+    min-height: 500px;
+    padding: 15px;
+    background: white;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    overflow-y: auto;
+    #close_btn {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      background: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: fixed;
+      top: 25px;
+      right: 30px;
+      font-size: 30px;
+      cursor: pointer;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    p {
+      margin: 10px 0px;
+    }
+    .settings {
+      width: 100%;
+      height: auto;
+      display: block;
+      .row {
+        width: 100%;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0px 20px;
+      }
+    }
+  }
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  z-index: 99;
+  background: #111;
+  color: #999;
+  font-size: 1.5rem;
+  z-index: 99;
+  p {
+    display: none;
+    width: 100%;
+    font-size: 18px;
+  }
+}
+
+
+#menu_btn2 {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .kutular {
+    padding: 20px;
+    width: 100%;
+    height: 250%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    grid-template-areas:
+      "kutu0"
+      "kutu1"
+      "kutu3"
+      "kutu5"
+      "kutu2"
+      "kutu4"
+      "kutu6";
+    .box {
+      .txt {
+        h1 {
+          font-size: 28px;
+        }
+      }
+    }
+  }
+
+  .kutu0 {
+    .left {
+      width: 100%;
+      #h1 {
+        font-size: 20px;
+      }
+    }
+    .right {
+      display: none;
+    }
+  }
+
+  .ayarlar {
+    display: none;
+    .menu {
+      width: 90%;
+      height: auto;
+      max-width: 90%;
+      max-height: auto;
+      min-width: 90%;
+      min-height: auto;
+      position: fixed;
+    }
+    .menu-bg {
+      position: fixed;
+    }
+  }
+
+  #menu_btn2 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background: orange;
+    font-size: 28px;
+    font-weight: bold;
+  }
+
+  .kbox, .dbox, .hbox, .abox {
+    width: 28% !important;
+    font-size: 22px !important;
+  }
+
+  .korona_text {
+    .kbox:nth-child(1) {
+      display: none;
+    }
+  }
+
+  .altin_text {
+    .abox:nth-child(3) {
+      display: none;
+    }
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
+    --active: #275efe;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, 0.3);
+    --border: #bbc1e1;
+    --border-hover: #275efe;
+    --background: #fff;
+    --disabled: #f6f8ff;
+    --disabled-inner: #e1e6f9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    &:after {
+      content: "";
+      display: block;
+      left: 0;
+      top: 0;
+      position: absolute;
+      transition: transform var(--d-t, 0.3s) var(--d-t-e, ease),
+        opacity var(--d-o, 0.2s);
+    }
+    &:checked {
+      --b: var(--active);
+      --bc: var(--active);
+      --d-o: 0.3s;
+      --d-t: 0.6s;
+      --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+    }
+    &:disabled {
+      --b: var(--disabled);
+      cursor: not-allowed;
+      opacity: 0.9;
+      &:checked {
+        --b: var(--disabled-inner);
+        --bc: var(--border);
+      }
+      & + label {
+        cursor: not-allowed;
+      }
+    }
+    &:hover {
+      &:not(:checked) {
+        &:not(:disabled) {
+          --bc: var(--border-hover);
+        }
+      }
+    }
+    &:focus {
+      box-shadow: 0 0 0 var(--focus);
+    }
+    &:not(.switch) {
+      width: 21px;
+      &:after {
+        opacity: var(--o, 0);
+      }
+      &:checked {
+        --o: 1;
+      }
+    }
+    & + label {
+      font-size: 18px;
+      line-height: 21px;
+      display: inline-block;
+      vertical-align: top;
+      cursor: pointer;
+      margin-left: 4px;
+    }
+  }
+  input[type="checkbox"] {
+    &:not(.switch) {
+      border-radius: 7px;
+      &:after {
+        width: 5px;
+        height: 9px;
+        border: 2px solid var(--active-inner);
+        border-top: 0;
+        border-left: 0;
+        left: 7px;
+        top: 4px;
+        transform: rotate(var(--r, 20deg));
+      }
+      &:checked {
+        --r: 43deg;
+      }
+    }
+    &.switch {
+      width: 38px;
+      border-radius: 11px;
+      &:after {
+        left: 2px;
+        top: 2px;
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+        background: var(--ab, var(--border));
+        transform: translateX(var(--x, 0));
+      }
+      &:checked {
+        --ab: var(--active-inner);
+        --x: 17px;
+      }
+      &:disabled {
+        &:not(:checked) {
+          &:after {
+            opacity: 0.6;
+          }
+        }
+      }
+    }
+  }
+  input[type="radio"] {
+    border-radius: 50%;
+    &:after {
+      width: 19px;
+      height: 19px;
+      border-radius: 50%;
+      background: var(--active-inner);
+      opacity: 0;
+      transform: scale(var(--s, 0.7));
+    }
+    &:checked {
+      --s: 0.5;
+    }
+  }
+}

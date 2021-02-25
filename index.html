@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/push.js"></script>
+    <script src="js/app.js"></script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css?v=1" />
+    <title>Hello System Admin - ibrahimodev.tk</title>
+  </head>
+  <body>
+    <div class="kutular">
+      <div class="kutu0 box">
+        <div class="left">
+          <h1 id="h1">Hello System Admin!</h1>
+          <p id="yen_gosterge">
+            Veriler Kaç Kez Yenilendi : <span id="yen">0</span>
+          </p>
+        </div>
+        <div class="right">
+          <div class="ip_info rbox">
+            <h4 id="ip_h4">İp : <span id="ip"></span></h4>
+            <p>Şehir : <span id="ipsehir"></span></p>
+            <p>Ülke : <span id="ipulke"></span></p>
+          </div>
+          <div class="tarih rbox">
+            <h2 id="tarih"></h2>
+            <h3 id="saat"></h3>
+            <h3 id="gun"></h3>
+          </div>
+          <button id="menu_btn"><p>menü</p></button>
+        </div>
+      </div>
+      <div class="kutu1 box">
+        <img
+          src="img/doviz.jpg"
+          alt="doviz"
+        />
+        <div class="txt">
+          <h1>Döviz</h1>
+          <div class="doviz_text">
+            <div class="dbox">
+              <h3>Dolar</h3>
+              <p id="dolar"></p>
+            </div>
+            <div class="dbox">
+              <h3>Euro</h3>
+              <p id="euro"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kutu2 box">
+        <img
+          src="img/korona.jpg"
+          alt="covid"
+        />
+        <div class="txt">
+          <h1><span id="korona_tarih"></span> Korona Virüs</h1>
+          <div class="korona_text">
+            <div class="kbox">
+              <h3>Test</h3>
+              <p id="test"></p>
+            </div>
+            <div class="kbox">
+              <h3>Vaka</h3>
+              <p id="vaka"></p>
+            </div>
+            <div class="kbox">
+              <h3>İyileşen</h3>
+              <p id="iyilesen"></p>
+            </div>
+            <div class="kbox">
+              <h3>Vefat</h3>
+              <p id="vefat"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kutu3 box">
+        <img
+          src="img/kripto.jpg"
+          alt="kripto"
+        />
+        <div class="txt">
+          <h1>Kripto</h1>
+          <div class="kripto_text">
+            <div class="kbox">
+              <h3>Bitcoin</h3>
+              <p id="btc"></p>
+            </div>
+            <div class="kbox">
+              <h3>Ethereum</h3>
+              <p id="eth"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kutu4 box">
+        <img
+          src="img/hava.jpg"
+          alt="hava"
+        />
+        <div class="txt">
+          <h1><span id="sehir"></span> Hava Durumu</h1>
+          <div class="content">
+            <div class="hava_text">
+              <div class="hbox">
+                <h3>Hava</h3>
+                <p id="hava"></p>
+              </div>
+              <div class="hbox">
+                <h3>Sıcaklık</h3>
+                <p id="sic"></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kutu5 box">
+        <img
+          src="img/altin.jpg"
+          alt="altın"
+        />
+        <div class="txt">
+          <h1>Altın</h1>
+          <div class="altin_text">
+            <div class="abox">
+              <h3>Gram</h3>
+              <p id="gram"></p>
+            </div>
+            <div class="abox">
+              <h3>Çeyrek</h3>
+              <p id="ceyrek"></p>
+            </div>
+            <div class="abox">
+              <h3>Yarım</h3>
+              <p id="yarim"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="kutu6 box">
+        <img
+          src="img/cami.jpg"
+          alt="namaz"
+        />
+        <div class="txt">
+          <h1><span id="nsehir"></span> Namaz Vakitleri</h1>
+          <div class="namaz">
+            <div class="row">
+              <p>İmsak : <span id="imsak"></span></p>
+              <p>Güneş : <span id="gunes"></span></p>
+              <p>Öğle : <span id="ogle"></span></p>
+            </div>
+            <div class="row">
+              <p>İkindi : <span id="ikindi"></span></p>
+              <p>Akşam : <span id="aksam"></span></p>
+              <p>Yatsı : <span id="yatsi"></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="ayarlar">
+      <div class="menu-bg"></div>
+      <div class="menu">
+        <p id="close_btn">X</p>
+        <h1>Menü Yardım.</h1>
+        <p>Veriler Kaç Kez Yenilendi : <span id="myen"></span></p>
+        <h2>Bilgilendirme</h2>
+        <h4>Sistemin Amacı Nedir?</h4>
+        <p>
+          6 farklı siteden bakıp göreceğiniz verileri tek bir sitede
+          <b>doğruya en yakın</b> şekilde
+          <b>30 saniyede bir yenilenerek</b> göstermektir. Eğer yanlış verileri görüyorsanız api deki veriler geç güncellendiği içindir.
+        </p>
+        <h4>Bildirim</h4>
+        <p>
+          <p>Pencere açık olduğu sürece Her 5 dakikada bir döviz bildirimi almak için bildirimleri etkinleştir. (Her Tarayıcıda Çalışmayabilir!)</p>
+          <button id="bildirim">Bildirim Gönder!</button>
+        </p>
+        <h4>Tasarımda Bozukluk Var?</h4>
+        <p>
+          Sitedeki çerezleri ve önbelleği temizleyerek tekrar siteye giriniz.
+        </p>
+        <h4>Veriler Boş?</h4>
+        <p>
+          Sistemde sıkıntı olmuş olabilir 10dk sonra tekrar deneyin veya benimle
+          iletişime geçin.
+        </p>
+        <p>
+          <a href="mailto:ibrahimodev42@gmail.com">ibrahimodev42@gmail.com</a>
+        </p>
+        <h4>Veriler Yanlış?</h4>
+        <p>
+          Hava durumu ve Namaz vakitleri bu veriler boş gözüküyorsa veya başka
+          şehrin verileri ise ip adresinizden gelen veriler yanlıştır.
+        </p>
+        <h4>Nasıl Çalışır?</h4>
+        <p>
+          İP adresinizden gelen verilerden şehrinizi alıp bulunduğunuz bölgedeki
+          verileri APİ desteği ile başka siteden veri çekerek gösteriyor.
+        </p>
+        <h2>Ayarlar</h2>
+        <p>
+          Burdan ayarlarınızı yapabilirsiniz fakat
+          <b>siteden çıkınca ayarlar varsayılan olarak çalışır.</b>
+        </p>
+        <div class="settings">
+          <div class="row">
+            <label for="ip_gizle">İP Adresini Gizle</label>
+            <input
+              class="switch"
+              type="checkbox"
+              name="ip_gizle"
+              id="ip_gizle"
+            />
+          </div>
+          <div class="row">
+            <label for="ip_bilgi_gizle">İP Adresi Bilgilerini Gizle</label>
+            <input
+              class="switch"
+              type="checkbox"
+              name="ip_bilgi_gizle"
+              id="ip_bilgi_gizle"
+            />
+          </div>
+          <div class="row">
+            <label for="zaman_gizle">Zaman Bilgilerini Gizle</label>
+            <input
+              class="switch"
+              type="checkbox"
+              name="zaman_gizle"
+              id="zaman_gizle"
+            />
+          </div>
+          <div class="row">
+            <label for="img_gizle">Resimleri Kaldır</label>
+            <input
+              class="switch"
+              type="checkbox"
+              name="img_gizle"
+              id="img_gizle"
+            />
+          </div>
+          <div class="row">
+            <label for="yen_gizle">Yenilenme Götergesini Kaldır</label>
+            <input
+              class="switch"
+              type="checkbox"
+              name="yen_gizle"
+              id="yen_gizle"
+            />
+          </div>
+        </div>
+        <h1>KAYNAK</h1>
+        <p>
+          (6) Bütün verilerin çekildiği APİ desteğini veren hizmet :
+          <a href="https://www.genelpara.com/">https://www.genelpara.com/</a>
+        </p>
+        <p>
+          (1) İP adresinin verilerini gösteren APİ :
+          <a href="https://freegeoip.app/json/">https://freegeoip.app/json/</a>
+        </p>
+      </div>
+    </div>
+    <div id="loading">
+      <h1>Yükleniyor...</h1>
+      <p id="lp"><b>Uzun süredir yükleniyorsa sayfayı yenileyin veya 10 dk sonra tekrar deneyin.</b></p>
+    </div>
+    <button id="menu_btn2"><p>menü</p></button>
+  </body>
+</html>

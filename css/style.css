@@ -1,0 +1,896 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  outline: none;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  background: #111;
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+.kutular {
+  padding: 20px;
+  width: 100%;
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: 1fr 2fr 2fr 2fr;
+      grid-template-rows: 1fr 2fr 2fr 2fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+      grid-template-areas: "kutu0 kutu0"
+ "kutu1 kutu2"
+ "kutu3 kutu4"
+ "kutu5 kutu6";
+  color: white;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kutular .box {
+  z-index: 99;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
+  text-shadow: 0px 0px 6px black;
+  background: black;
+}
+
+.kutular .box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-filter: blur(1px);
+          filter: blur(1px);
+  -webkit-transform: scale(1.0075);
+          transform: scale(1.0075);
+}
+
+.kutular .box .txt {
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.kutular .box .txt h1 {
+  display: block;
+  position: relative;
+  margin-left: 20px;
+  margin-top: 10px;
+  font-size: 38px;
+}
+
+.kutular .box .txt h1::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  width: 5px;
+  height: 100%;
+  background: red;
+}
+
+.kutular .box:hover .txt h1 {
+  margin-left: 25px;
+}
+
+.kutu0 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-area: kutu0;
+  background: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.kutu0 .left {
+  top: 0;
+  left: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  word-wrap: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kutu0 .right {
+  top: 0;
+  right: 0;
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kutu0 .right .rbox {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  word-wrap: break-word;
+  font-size: 20px;
+}
+
+.kutu0 .right button {
+  width: 50px;
+  min-width: 50px;
+  height: 100%;
+  border: 0;
+  background: orange;
+  font-weight: bold;
+  font-size: 24px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transition: width 150ms ease-in-out;
+  transition: width 150ms ease-in-out;
+}
+
+.kutu0 .right button p {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-transition: -webkit-transform 150ms ease-in-out;
+  transition: -webkit-transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out;
+  transition: transform 150ms ease-in-out, -webkit-transform 150ms ease-in-out;
+}
+
+.kutu0 .right button:hover {
+  width: 150px;
+  min-width: 150px;
+}
+
+.kutu0 .right button:hover p {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+}
+
+.kutu1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: kutu1;
+}
+
+.kutu1 .doviz_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kutu1 .doviz_text .dbox {
+  width: 30%;
+  height: 25%;
+  margin: 0px 20px;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kutu1 .doviz_text .dbox h3 {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.kutu1 .doviz_text .dbox h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background: red;
+}
+
+.kutu2 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: kutu2;
+}
+
+.kutu2 .korona_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kutu2 .korona_text .kbox {
+  width: 25%;
+  height: 25%;
+  margin: 0px 20px;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kutu2 .korona_text .kbox h3 {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.kutu2 .korona_text .kbox h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background: red;
+}
+
+.kutu3 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: kutu3;
+}
+
+.kutu3 .kripto_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kutu3 .kripto_text .kbox {
+  width: 25%;
+  height: 25%;
+  margin: 0px 20px;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kutu3 .kripto_text .kbox h3 {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.kutu3 .kripto_text .kbox h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background: red;
+}
+
+.kutu4 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 2;
+  grid-area: kutu4;
+}
+
+.kutu4 .hava_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kutu4 .hava_text .hbox {
+  width: 25%;
+  height: 25%;
+  margin: 0px 20px;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kutu4 .hava_text .hbox h3 {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.kutu4 .hava_text .hbox h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background: red;
+}
+
+.kutu5 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: kutu5;
+}
+
+.kutu5 .altin_text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kutu5 .altin_text .abox {
+  width: 25%;
+  height: 25%;
+  margin: 0px 20px;
+  font-size: 1.8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.kutu5 .altin_text .abox h3 {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.kutu5 .altin_text .abox h3::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0px;
+  width: 100%;
+  height: 5px;
+  background: red;
+}
+
+.kutu6 {
+  position: relative;
+  -ms-grid-row: 4;
+  -ms-grid-column: 2;
+  grid-area: kutu6;
+}
+
+.kutu6 .namaz {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.kutu6 .namaz p {
+  font-size: 22px;
+}
+
+.kutu6 .namaz .row {
+  position: relative;
+  margin: 0px 15px;
+}
+
+.kutu6 .namaz .row::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: -7px;
+  width: 5px;
+  height: 100%;
+  background: red;
+}
+
+.glow {
+  color: #f00;
+  text-shadow: 0px 0px 10px #f00;
+}
+
+.h1span {
+  display: inline-block;
+  padding: 0 2px;
+}
+
+.menu-bg {
+  width: 100%;
+  height: 100%;
+  background: black;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 99;
+  opacity: 0.5;
+}
+
+.ayarlar {
+  display: none;
+}
+
+.ayarlar .menu {
+  width: 500px;
+  height: 500px;
+  max-width: 500px;
+  max-height: 500px;
+  min-width: 500px;
+  min-height: 500px;
+  padding: 15px;
+  background: white;
+  border-radius: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 99;
+  overflow-y: auto;
+}
+
+.ayarlar .menu #close_btn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: fixed;
+  top: 25px;
+  right: 30px;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.ayarlar .menu h1,
+.ayarlar .menu h2,
+.ayarlar .menu h3,
+.ayarlar .menu h4,
+.ayarlar .menu p {
+  margin: 10px 0px;
+}
+
+.ayarlar .menu .settings {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.ayarlar .menu .settings .row {
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0px 20px;
+}
+
+#loading {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  z-index: 99;
+  background: #111;
+  color: #999;
+  font-size: 1.5rem;
+  z-index: 99;
+}
+
+#loading p {
+  display: none;
+  width: 100%;
+  font-size: 18px;
+}
+
+#menu_btn2 {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .kutular {
+    padding: 20px;
+    width: 100%;
+    height: 250%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+        grid-template-rows: 1fr 2fr 2fr 2fr 2fr 2fr 2fr;
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+        grid-template-areas: "kutu0"
+ "kutu1"
+ "kutu3"
+ "kutu5"
+ "kutu2"
+ "kutu4"
+ "kutu6";
+  }
+  .kutular .box .txt h1 {
+    font-size: 28px;
+  }
+  .kutu0 .left {
+    width: 100%;
+  }
+  .kutu0 .left #h1 {
+    font-size: 20px;
+  }
+  .kutu0 .right {
+    display: none;
+  }
+  .ayarlar {
+    display: none;
+  }
+  .ayarlar .menu {
+    width: 90%;
+    height: auto;
+    max-width: 90%;
+    max-height: auto;
+    min-width: 90%;
+    min-height: auto;
+    position: fixed;
+  }
+  .ayarlar .menu-bg {
+    position: fixed;
+  }
+  #menu_btn2 {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border: 0;
+    background: orange;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  .kbox, .dbox, .hbox, .abox {
+    width: 28% !important;
+    font-size: 22px !important;
+  }
+  .korona_text .kbox:nth-child(1) {
+    display: none;
+  }
+  .altin_text .abox:nth-child(3) {
+    display: none;
+  }
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  input[type="checkbox"],
+  input[type="radio"] {
+    --active: #275efe;
+    --active-inner: #fff;
+    --focus: 2px rgba(39, 94, 254, 0.3);
+    --border: #bbc1e1;
+    --border-hover: #275efe;
+    --background: #fff;
+    --disabled: #f6f8ff;
+    --disabled-inner: #e1e6f9;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    height: 21px;
+    outline: none;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    margin: 0;
+    cursor: pointer;
+    border: 1px solid var(--bc, var(--border));
+    background: var(--b, var(--background));
+    -webkit-transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, -webkit-box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s;
+    transition: background 0.3s, border-color 0.3s, box-shadow 0.2s, -webkit-box-shadow 0.2s;
+  }
+  input[type="checkbox"]:after,
+  input[type="radio"]:after {
+    content: "";
+    display: block;
+    left: 0;
+    top: 0;
+    position: absolute;
+    -webkit-transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+    transition: opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s);
+    transition: transform var(--d-t, 0.3s) var(--d-t-e, ease), opacity var(--d-o, 0.2s), -webkit-transform var(--d-t, 0.3s) var(--d-t-e, ease);
+  }
+  input[type="checkbox"]:checked,
+  input[type="radio"]:checked {
+    --b: var(--active);
+    --bc: var(--active);
+    --d-o: 0.3s;
+    --d-t: 0.6s;
+    --d-t-e: cubic-bezier(0.2, 0.85, 0.32, 1.2);
+  }
+  input[type="checkbox"]:disabled,
+  input[type="radio"]:disabled {
+    --b: var(--disabled);
+    cursor: not-allowed;
+    opacity: 0.9;
+  }
+  input[type="checkbox"]:disabled:checked,
+  input[type="radio"]:disabled:checked {
+    --b: var(--disabled-inner);
+    --bc: var(--border);
+  }
+  input[type="checkbox"]:disabled + label,
+  input[type="radio"]:disabled + label {
+    cursor: not-allowed;
+  }
+  input[type="checkbox"]:hover:not(:checked):not(:disabled),
+  input[type="radio"]:hover:not(:checked):not(:disabled) {
+    --bc: var(--border-hover);
+  }
+  input[type="checkbox"]:focus,
+  input[type="radio"]:focus {
+    -webkit-box-shadow: 0 0 0 var(--focus);
+            box-shadow: 0 0 0 var(--focus);
+  }
+  input[type="checkbox"]:not(.switch),
+  input[type="radio"]:not(.switch) {
+    width: 21px;
+  }
+  input[type="checkbox"]:not(.switch):after,
+  input[type="radio"]:not(.switch):after {
+    opacity: var(--o, 0);
+  }
+  input[type="checkbox"]:not(.switch):checked,
+  input[type="radio"]:not(.switch):checked {
+    --o: 1;
+  }
+  input[type="checkbox"] + label,
+  input[type="radio"] + label {
+    font-size: 18px;
+    line-height: 21px;
+    display: inline-block;
+    vertical-align: top;
+    cursor: pointer;
+    margin-left: 4px;
+  }
+  input[type="checkbox"]:not(.switch) {
+    border-radius: 7px;
+  }
+  input[type="checkbox"]:not(.switch):after {
+    width: 5px;
+    height: 9px;
+    border: 2px solid var(--active-inner);
+    border-top: 0;
+    border-left: 0;
+    left: 7px;
+    top: 4px;
+    -webkit-transform: rotate(var(--r, 20deg));
+            transform: rotate(var(--r, 20deg));
+  }
+  input[type="checkbox"]:not(.switch):checked {
+    --r: 43deg;
+  }
+  input[type="checkbox"].switch {
+    width: 38px;
+    border-radius: 11px;
+  }
+  input[type="checkbox"].switch:after {
+    left: 2px;
+    top: 2px;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    background: var(--ab, var(--border));
+    -webkit-transform: translateX(var(--x, 0));
+            transform: translateX(var(--x, 0));
+  }
+  input[type="checkbox"].switch:checked {
+    --ab: var(--active-inner);
+    --x: 17px;
+  }
+  input[type="checkbox"].switch:disabled:not(:checked):after {
+    opacity: 0.6;
+  }
+  input[type="radio"] {
+    border-radius: 50%;
+  }
+  input[type="radio"]:after {
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background: var(--active-inner);
+    opacity: 0;
+    -webkit-transform: scale(var(--s, 0.7));
+            transform: scale(var(--s, 0.7));
+  }
+  input[type="radio"]:checked {
+    --s: 0.5;
+  }
+}
+/*# sourceMappingURL=style.css.map */
